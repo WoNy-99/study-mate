@@ -1,0 +1,7 @@
+AZURE_OCR_API_KEY=replace_me
+AZURE_OCR_ENDPOINT=https://your-resource.cognitiveservices.azure.com/
+OPENAI_API_KEY=replace_me
+GOOGLE_STT_API_KEY=replace_me
+GCS_SIGNED_URL=https://example.invalid/upload
+GCS_URI=gs://your-bucket/path/to/audio.wav
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_border" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="요일 선택" />
+
+        <Spinner
+            android:id="@+id/spinner_day"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작 시간 선택" />
+
+        <Spinner
+            android:id="@+id/spinner_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종료 시간 선택" />
+
+        <Spinner
+            android:id="@+id/spinner_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="과목 입력" />
+
+        <EditText
+            android:id="@+id/edit_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="과목명을 입력하세요" />
+
+        <Button
+            android:id="@+id/btn_add_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#9DD5F8"
+            android:text="추가"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#9DD5F8"
+            android:text="취소"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_border"
+        android:gravity="center"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="과목 수정 &amp; 삭제"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/edit_new_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="과목명 입력"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btn_edit_subject"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#9DD5F8"
+                android:text="수정"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btn_delete_subject"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#9DD5F8"
+                android:text="삭제"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btn_cancel_edit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#9DD5F8"
+                android:text="취소"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

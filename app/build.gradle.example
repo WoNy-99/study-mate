@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.studymate'
+
+    defaultConfig {
+        applicationId 'com.example.studymate'
+        minSdk 24
+        targetSdk 35
+
+        buildConfigField 'String', 'AZURE_OCR_API_KEY', '\"' + project.findProperty('AZURE_OCR_API_KEY', '') + '\"'
+        buildConfigField 'String', 'AZURE_OCR_ENDPOINT', '\"' + project.findProperty('AZURE_OCR_ENDPOINT', '') + '\"'
+        buildConfigField 'String', 'OPENAI_API_KEY', '\"' + project.findProperty('OPENAI_API_KEY', '') + '\"'
+        buildConfigField 'String', 'GOOGLE_STT_API_KEY', '\"' + project.findProperty('GOOGLE_STT_API_KEY', '') + '\"'
+        buildConfigField 'String', 'GCS_SIGNED_URL', '\"' + project.findProperty('GCS_SIGNED_URL', '') + '\"'
+        buildConfigField 'String', 'GCS_URI', '\"' + project.findProperty('GCS_URI', '') + '\"'
+    }
+}
+
+dependencies {
+    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
+}
+

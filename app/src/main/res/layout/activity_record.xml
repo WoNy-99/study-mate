@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="#87CEFA">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="StudyMate 로고"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="StudyMate" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#FFFFFF">
+
+        <!-- 🔘 이미지 녹음 버튼 -->
+        <ImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_play"
+            android:background="@drawable/circle_button"
+            android:scaleType="centerInside"
+            android:contentDescription="녹음 버튼" />
+
+        <!-- ⬇ 상태 텍스트 -->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginTop="12dp" />
+
+        <!-- 🔄 변환 버튼 -->
+        <Button
+            android:id="@+id/btn_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9DD5F8"
+            android:textColor="#000000"
+            android:text="녹음 파일 변환"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btn_load_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9DD5F8"
+            android:text="파일 불러오기"
+            android:layout_marginTop="12dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textColor="#F44336"
+            android:text="기존 녹음 파일을 불러올 경우, .wav파일로 변환 후 \n 불러오셔야 정상 작동 됩니다."/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ✅ 상단 StudyMate 로고: 하늘색 배경을 양쪽 끝까지 꽉 채움 -->
+    <LinearLayout
+        android:id="@+id/logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="#87CEFA">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="StudyMate 로고"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="StudyMate" />
+    </LinearLayout>
+
+    <!-- 설명 텍스트뷰 -->
+
+    <HorizontalScrollView
+        android:id="@+id/middle_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_container"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="-185dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <!-- Manual_Record -->
+            <LinearLayout
+                android:id="@+id/Manual_Record"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:background="#87CEFA"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="녹음 설명서"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Manual_Schedule -->
+            <LinearLayout
+                android:id="@+id/Manual_Schedule"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:background="#87CEFA"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="시간표 설명서"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Manual_OCR -->
+            <LinearLayout
+                android:id="@+id/Manual_OCR"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:background="#87CEFA"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="OCR 설명서"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Manual_Summary -->
+            <LinearLayout
+                android:id="@+id/Manual_Summary"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:background="#87CEFA"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="요약 설명서"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Manual_Quiz -->
+            <LinearLayout
+                android:id="@+id/Manual_Quiz"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:background="#87CEFA"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="퀴즈 설명서"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="75dp"
+        android:text="위의 버튼을 누르면 아래에 설명이 나옵니다."
+        android:layout_below="@id/middle_scroll" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text"
+        android:layout_above="@id/bottom_button_container"
+        android:background="@drawable/dialog_border" >
+
+        <TextView
+            android:id="@+id/manual_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp"
+            android:gravity="center"
+            android:text="📘 StudyMate 사용 설명서\n
+– 학습을 쉽게, 효율적으로 –\n\n
+✅ Step 1 \n강의, 공부 내용을 녹음하고 요약 저장하기 \n\n
+🎙️ 녹음 버튼을 눌러 강의나 학습 내용을 녹음하세요.
+녹음이 끝나면 AI가 자동으로 내용을 분석하여 핵심 요약문을 생성합니다.
+생성된 요약문은 자동으로 저장되며, 복습에 매우 유용합니다.\n
+\n
+✅ Step 2\n 필기 자료를 OCR로 텍스트화하고 저장하기\n\n
+📄 OCR 버튼을 눌러 필기 노트나 강의 자료 PDF를 불러오세요.
+AI가 이미지 속 글자를 인식해 텍스트 파일로 변환해줍니다.
+변환된 텍스트는 저장되어 이후 통합 요약 및 퀴즈에 활용됩니다.\n\n
+
+✅ Step 3\n OCR로 저장한 텍스트 파일 불러오기\n\n
+📁 저장소 버튼을 눌러 OCR로 저장된 텍스트 파일을 선택하세요.
+이 파일은 이후 녹음 요약본과 통합 요약할 때 사용됩니다.
+\n\n
+✅ Step 4\n 녹음 요약본 + OCR 텍스트 → 최종 통합 요약 저장\n\n
+📄 최종 요약 버튼을 눌러 OCR 텍스트와 녹음 요약본을 불러와
+하나의 통합 요약문을 생성하세요.
+이 요약은 본격적인 복습용 콘텐츠로 저장되며, 퀴즈 생성에도 활용됩니다.
+\n\n
+✅ Step 5\n 통합 요약본을 바탕으로 퀴즈 생성\n\n
+❓ 퀴즈 버튼을 눌러 최종 요약문 기반으로 자동 생성된
+객관식 문제 3~5개를 풀어보세요.
+각 문제에는 해설이 포함되어 있어 실력을 점검하고 복습하는 데 효과적입니다." />
+
+
+    </ScrollView>
+
+
+    <!-- ✅ 하단 버튼 영역: 좌우 여백을 위한 padding 적용 -->
+    <LinearLayout
+        android:id="@+id/bottom_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- 🔘 녹음 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp">
+
+                    <ImageButton
+                        android:id="@+id/circle_button_record"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_mic_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="녹음"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 🔘 저장소 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_open_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp">
+
+                    <ImageButton
+                        android:id="@+id/circle_button_open_storage"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_folder_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_open_storage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저장소"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 🔘 시간표 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp">
+
+                    <ImageButton
+                        android:id="@+id/circle_button_schedule"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_calendar_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_schedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시간표"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 🔘 OCR 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_ocr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp">
+
+                    <ImageButton
+                        android:id="@+id/circle_button_ocr"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_ocr_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_ocr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OCR"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 🔘 최종 요약 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_final"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp" >
+
+                    <ImageButton
+                        android:id="@+id/circle_button_final"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_summary_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_final"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최종 요약"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 🔘 퀴즈 버튼 -->
+                <LinearLayout
+                    android:id="@+id/btn_quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="8dp">
+
+                    <ImageButton
+                        android:id="@+id/circle_button_quiz"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_button"
+                        android:scaleType="centerInside"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_quiz_white" />
+
+                    <TextView
+                        android:id="@+id/circle_button_label_quiz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="퀴즈"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
