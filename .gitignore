@@ -13,3 +13,27 @@ google-services.json
 *.env
 .DS_Store
 
+
+# Public archive: local credentials, databases, and personal working files
+.env
+.env.*
+*.env
+config.env
+!*.env.example
+!.env.example
+!.env.*.example
+!config.env.example
+*.db
+*.sqlite*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*service-account*.json
+*credentials*.json
+google-services.json
+__pycache__/
+*.py[cod]
+*.log
