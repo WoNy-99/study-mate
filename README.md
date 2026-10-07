@@ -9,6 +9,7 @@
 ## 프로젝트 설명
 
 장시간 강의 녹음에서 핵심 내용을 다시 찾기 어렵고, 태블릿·종이 필기는 검색하기 어렵다는 학습 문제에서 출발했습니다. Study Mate는 음성과 필기 자료를 텍스트로 통합한 뒤 요약과 퀴즈를 생성하고, 시간표 기반 알림으로 복습까지 이어지도록 설계한 Android 학습 보조 앱입니다.
+시연 영상 : https://youtu.be/7oYi2wS3iKg
 
 <p align="center">
   <img src="app/src/main/studymatelogo.jpg.png" alt="Study Mate application logo" width="220">
